@@ -21,8 +21,8 @@ new Vue({
 
   data: {
     todos:[],
-    current:-1,
-    options[
+    current: -1,
+    options: [
       { value: -1, label: 'すべて' },
       { value: 0, label: '作業中'},
       { value: 0, label: '完了'}
@@ -33,14 +33,14 @@ new Vue({
   computed: {
 
     computedTodos: function() {
-      return this.todos.filter(function(el) {
+      return this.todos.filter(function (el) {
         return this.current < 0 ? true : this.current === el.state
       },this)
     },
 
   labels(){
     return this.options.reduce(function(a, b){
-      return object.assign(a, { [b.value]: b.label })
+      return Object.assign(a, { [b.value]: b.label })
     }, {})
   }
   },
