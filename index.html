@@ -8,10 +8,11 @@
 <body>
   <div id="app">
     <h1>ToDoリスト</h1>
+
     <label v-for="label in options">
       <input type="radio"
         v-model="current"
-        v-bind:value="label.value">{{ label.label}}
+        v-bind:value="label.value">{{ label.label }}
     </label>
     （{{ computedTodos.length }} 件を表示）
     <table>
@@ -21,7 +22,7 @@
           <!-- 要素の情報　-->
           <th class="id">ID</th>
           <th class="comment">コメント</th>
-          <th class="state">状態</th>
+          <th class="state">現在の状態</th>
           <th class="button">-</th>
         </tr>
       </thead>
